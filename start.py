@@ -65,6 +65,6 @@ while mastercontrolbool == True:
     runagain = input("Would you like to do another item?  y for yes, n for no:  ")
     if runagain.lower() != "y":
         mastercontrolbool = False
-    else: clearscreen()
+    else: pass #clearscreen()
 
 #os.system("pause") #stops the program from ending immediately after the last action
