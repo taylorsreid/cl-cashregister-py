@@ -1,5 +1,6 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 testfile.py
+#currenttransaction.json
 #*.py[cod]
 #*$py.class
