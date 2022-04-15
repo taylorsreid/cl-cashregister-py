@@ -17,6 +17,7 @@ format for allitems:
         "price" : 69.99
     }
 }
+etc
 '''
 
 
