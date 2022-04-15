@@ -1,4 +1,4 @@
-import crfunc
+import crfunc #my functions file
 mastercontrolbool = True #master control whether to continue looping or not
 
 crfunc.clearscreen()
@@ -7,6 +7,7 @@ print("Hello and welcome to the Python Command Line Cash Register")
 while mastercontrolbool == True:
 
     crfunc.additem()
+    crfunc.printtrans()
 
     runagain = input("Would you like to do another item?  y for yes, n for no:  ")
     if runagain.lower() != "y":
