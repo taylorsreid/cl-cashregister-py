@@ -5,12 +5,15 @@ import os
 mastercontrolbool = True #master control whether to continue looping or not
 version = "alpha"
 
-crfunc.clearscreen()
+crfunc.clear_screen()
 print(f"Hello and welcome to the Python Command Line Cash Register")
 print(f"Version {version}")
 
+with open('current_transaction.csv','w') as f:
+    f.write("UPC, NAME, PRICE\n")
+
 while mastercontrolbool == True:
 
-    crfunc.usrinp()
-    crfunc.clearscreen()
-    crfunc.printtrans()
+    crfunc.usr_inp()
+    crfunc.clear_screen()
+    crfunc.print_trans()
