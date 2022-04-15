@@ -1,4 +1,5 @@
 import crfunc #my functions file
+import os
 mastercontrolbool = True #master control whether to continue looping or not
 
 crfunc.clearscreen()
@@ -12,6 +13,7 @@ while mastercontrolbool == True:
     runagain = input("Would you like to do another item?  y for yes, n for no:  ")
     if runagain.lower() != "y":
         mastercontrolbool = False
-    #else: pass #clearscreen()
-
-#os.system("pause") #stops the program from ending immediately after the last action
+    else:
+        crfunc.clearscreen()
+        print("GOODBYE!")
+        os.system("pause") #stops the program from ending immediately after the last action

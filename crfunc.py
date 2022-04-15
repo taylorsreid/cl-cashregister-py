@@ -53,6 +53,9 @@ def additem():
 
 def printtrans(): #PRINTS THE TRANSACTION TO THE SCREEN
     clearscreen()
+
+    print("Scan a UPC to add an item | (R)emove an item | (V)oid Transaction | (Q)uit")
+
     termsize = os.get_terminal_size().columns
     spaces = termsize - (len(upc) + len(itemname))
     print(upc + (" " * spaces) + itemname)
