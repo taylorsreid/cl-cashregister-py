@@ -3,7 +3,6 @@ import requests
 from os import system, name
 
 #VARIABLE DEFINITIONS
-mastercontrolbool = True #DETERMINES WHETHER TO CONTINUE LOOPING
 allitems = {} #DICTIONARY OF DICTIONARIES TO STORE ALL ITEMS IN THE TRANSACTION???
 '''
 format for allitems:
