@@ -20,7 +20,6 @@ format for allitems:
 etc
 '''
 
-
 def clearscreen():
     # for windows
     if name == 'nt':
@@ -38,21 +37,13 @@ def additem():
     #STORE DICTIONARY IN A JSON FILE SO THAT ITEMS NOT FOUND IN THE API CAN BE DEFINED AND REMEMBERED FOR A LATER DATE
     #AND SO THAT THE API ISN'T OVERUSED
     #MIGRATE TO AN SQL DATABASE LATER
-    pass
-
-def removeitem():
-    #ADD METHOD TO REMOVE AN ITEM FROM THE DICTIONARY OF CURRENT ITEMS IN THE TRANSACTION
-    pass
-
-while mastercontrolbool == True:
 
     #ITOEN GREEN TEA UPC FOR TESTING: 073366118238
-
     UPC = input("Please input a UPC:  ")
     response = requests.request("GET", f"https://barcode.monster/api/{UPC}").json()
     itemname = list(response["description"]) #puts the item name into a list so it can be modified
 
-    #23 chars to remove the "(from barcode.monster)" blah blah blah
+    #23 chars to remove the "(from barcode.monster)"
     i = -23
     while i < 0:
         del itemname[i]
@@ -60,7 +51,14 @@ while mastercontrolbool == True:
 
     #makes the itemname list back into a string
     itemname = ''.join(itemname)
-    print(itemname)
+    
+    return itemname
+
+def removeitem():
+    #ADD METHOD TO REMOVE AN ITEM FROM THE DICTIONARY OF CURRENT ITEMS IN THE TRANSACTION
+    pass
+
+while mastercontrolbool == True:
 
     runagain = input("Would you like to do another item?  y for yes, n for no:  ")
     if runagain.lower() != "y":
