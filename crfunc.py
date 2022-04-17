@@ -64,8 +64,10 @@ def print_trans(): #PRINTS THE TRANSACTION TO THE SCREEN
 
 def void_item():
     #ADD METHOD TO REMOVE AN ITEM FROM THE DICTIONARY OF CURRENT ITEMS IN THE TRANSACTION
+    print("Sorry, function not implemented yet.")
     pass
 
 def void_trans():
     #ADD METHOD TO CLEAR DICTIONARY AND START OVER
+    print("Sorry, function not implemented yet.")
     pass
