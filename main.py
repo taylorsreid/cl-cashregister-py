@@ -1,5 +1,12 @@
 #ITOEN GREEN TEA UPC FOR TESTING: 073366118238
 
+'''
+TODO 1 When voiding, it prints and empty data frame.  Fix that so it doesn't.
+TODO 2 Clean up the printing of the total line, the current formatting is sloppy.
+TODO 3 Add an actual void function.
+TODO 4 Add error handling for price input.
+'''
+
 import crfunc #my functions file
 import os
 mastercontrolbool = True #master control whether to continue looping or not
@@ -19,3 +26,5 @@ while mastercontrolbool == True:
     crfunc.usr_inp(input("Input:  "))
     crfunc.clear_screen()
     i+=1
+
+os.system("pause")

@@ -54,10 +54,11 @@ def add_item(add_item_selection):
 
 def print_trans(): #PRINTS THE TRANSACTION TO THE SCREEN
     df = pandas.read_csv('current_transaction.csv', sep=r'\s*,\s*', engine='python')
+    
     print(df)
-    #TODO ADD A TOTAL LINE AT THE BOTTOM OF THE PRINTOUT
+    #TODO 2
     print("\n                            TOTAL " + str(df['PRICE'].sum()))
-     #TODO old code below for formatting reference
+     #old code below for formatting reference
     '''
     termsize = os.get_terminal_size().columns
     spaces = termsize - (len(glob_upc) + len(glob_item_name))
@@ -65,11 +66,11 @@ def print_trans(): #PRINTS THE TRANSACTION TO THE SCREEN
     '''
 
 def void_item():
-    #ADD METHOD TO REMOVE AN ITEM FROM THE DICTIONARY OF CURRENT ITEMS IN THE TRANSACTION
+    #TODO 1
+    #TODO 3
     print("Sorry, function not implemented yet.")
-    pass
 
 def void_trans():
-    #ADD METHOD TO CLEAR DICTIONARY AND START OVER
+    #TODO 1
+    #TODO 3
     print("Sorry, function not implemented yet.")
-    pass
