@@ -53,8 +53,10 @@ def add_item(add_item_selection):
         f.write(f"{add_item_selection}, {add_item_name}, {add_item_price}\n")
 
 def print_trans(): #PRINTS THE TRANSACTION TO THE SCREEN
-    print(pandas.read_csv('current_transaction.csv'))
-     
+    df = pandas.read_csv('current_transaction.csv', sep=r'\s*,\s*', engine='python')
+    print(df)
+    #TODO ADD A TOTAL LINE AT THE BOTTOM OF THE PRINTOUT
+    print("\n                            TOTAL " + str(df['PRICE'].sum()))
      #TODO old code below for formatting reference
     '''
     termsize = os.get_terminal_size().columns
