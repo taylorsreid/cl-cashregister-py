@@ -5,6 +5,8 @@ TODO 1 When voiding, it prints and empty data frame.  Fix that so it doesn't.
 TODO 2 Clean up the printing of the total line, the current formatting is sloppy.
 TODO 3 Add an actual void function.
 TODO 4 Add error handling for price input.
+TODO 5 defunctionalize many of the variables and use global variables instead, this is too confusing.
+TODO 6 adding 4987176077271 then 073366118238 and setting a price of 1 sets the price of 073366118238 to NaN
 '''
 
 import crfunc #my functions file

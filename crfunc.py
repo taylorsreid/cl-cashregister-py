@@ -1,5 +1,5 @@
 from ntpath import join
-import os
+import time
 import requests
 from os import system, name
 import pandas
@@ -13,18 +13,18 @@ def clear_screen():
         _ = system('clear')
 
 def usr_inp(usr_inp_selection):
-    match usr_inp_selection:
-        case "i":
+        if usr_inp_selection.upper() == "I":
             void_item()
-        case "t":
+        elif usr_inp_selection.upper() == "T":
             void_trans()
-        case "q":
+        elif usr_inp_selection.upper() == "Q":
             yn = input("Are you sure you want to quit? Y for yes, N for no:  ")
-            if yn.lower() == "y":
+            if yn.upper() == "Y":
                 print("Goodbye and thanks for using Python Command Line Cash Register!")
+                time.sleep(3)
                 exit()
-                os.system("pause")
-        case _ :
+                
+        else:
             add_item(usr_inp_selection)
 
 def add_item(add_item_selection):
@@ -47,7 +47,7 @@ def add_item(add_item_selection):
     #glob_upc = add_item_selection
 
     #TEMPORARY
-    add_item_price = float(input("Please input a price for that item:  "))
+    add_item_price = float(input(f"Please input a price for {add_item_name}:  "))
 
     with open('current_transaction.csv','a') as f:
         f.write(f"{add_item_selection}, {add_item_name}, {add_item_price}\n")
