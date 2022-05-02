@@ -28,5 +28,3 @@ while mastercontrolbool == True:
     crfunc.usr_inp(input("Input:  "))
     crfunc.clear_screen()
     i+=1
-
-os.system("pause")

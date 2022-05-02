@@ -68,9 +68,9 @@ def print_trans(): #PRINTS THE TRANSACTION TO THE SCREEN
 def void_item():
     #TODO 1
     #TODO 3
-    print("Sorry, function not implemented yet.")
+    input("Sorry, function not implemented yet.  Press enter to continue.")
 
 def void_trans():
     #TODO 1
     #TODO 3
-    print("Sorry, function not implemented yet.")
+    input("Sorry, function not implemented yet.  Press enter to continue.")
