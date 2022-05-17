@@ -19,7 +19,7 @@ def usrInp(usrInput):
         elif usrInput.upper() == "T":
             voidTrans()
         elif usrInput.upper() == "Q":
-            yn = input("Are you sure you want to quit? Y for yes, N for no:  ")
+            yn = input("Are you sure you want to quit? [y/n]:  ")
             if yn.upper() == "Y":
                 add.mydb.close()
                 print("Goodbye and thanks for using Python Command Line Cash Register!")
@@ -32,7 +32,7 @@ def printTrans():
     df = pandas.DataFrame(items.data)
     if df.empty == False:
         print(df)
-        print(f"\n\t\t\tTOTAL:  {df['PRICE'].sum()}")
+        print(f"\n\t\t\tTOTAL:  {round(df['PRICE'].sum(), 2)}")
     else:
         pass
 
