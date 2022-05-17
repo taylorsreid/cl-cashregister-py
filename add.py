@@ -4,11 +4,14 @@ import items
 
 def addPriceManually():
     price = input("PRICE:  ")
-    if price.isnumeric():
+    #tries converting the number to a float, and if it can't (meaning it's not a number), then it runs again.
+    try:
+        float(price)
         return price
-    else:
+    except:
         return addPriceManually()
 
+#sets the item
 def setItem(upc, name, price):
     items.data["UPC"].append(upc)
     items.data["NAME"].append(name)
@@ -34,8 +37,8 @@ def addItemFromBM(usrInput):
         #makes the itemname list back into a string
         name = ''.join(name)
         
-        yesOrNo = input(f"Found on barcode.monster.  Does {name} look correct?  [y/n]:  ")
-        if yesOrNo.lower() == "y":
+        yn = input(f"Found on barcode.monster.  Does {name} look correct?  [y/n]:  ")
+        if yn.lower() == "y":
             setItem(usrInput, name, addPriceManually())
         else:
             addItemManually(usrInput)

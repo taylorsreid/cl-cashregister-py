@@ -1,5 +1,4 @@
 #TODO add try/except blocks to the imports in case the user doesn't have all of the libraries installed
-from ntpath import join
 from os import system, name
 import pandas
 import add
@@ -31,8 +30,11 @@ def usrInp(usrInput):
 
 def printTrans():
     df = pandas.DataFrame(items.data)
-    print(df)
-    print(f"\n\t\t\tTOTAL:  {df['PRICE'].sum()}")
+    if df.empty == False:
+        print(df)
+        print(f"\n\t\t\tTOTAL:  {df['PRICE'].sum()}")
+    else:
+        pass
 
     #old code below for formatting reference
     '''
@@ -42,11 +44,15 @@ def printTrans():
     '''
 
 def voidItem():
-    #TODO 1
-    #TODO 3
-    input("Sorry, function not implemented yet.  Press enter to continue.")
+    selection = input("Line number to remove:  ")
+    if selection.isnumeric():
+        del items.data["UPC"][int(selection)]
+        del items.data["NAME"][int(selection)]
+        del items.data["PRICE"][int(selection)]
 
 def voidTrans():
-    #TODO 1
-    #TODO 3
-    input("Sorry, function not implemented yet.  Press enter to continue.")
+    yn = input(f"Are you sure you wish to void the ENTIRE transaction?  [y/n]:  ")
+    if yn.lower() == "y":
+        del items.data["UPC"][0:]
+        del items.data["NAME"][0:]
+        del items.data["PRICE"][0:]
