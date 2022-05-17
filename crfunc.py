@@ -32,7 +32,7 @@ def printTrans():
     df = pandas.DataFrame(items.data)
     if df.empty == False:
         print(df)
-        print(f"\n\t\t\tTOTAL:  {round(df['PRICE'].sum(), 2)}")
+        print(f"\n\t\t\tTOTAL:  ${round(df['PRICE'].sum(), 2)}")
     else:
         pass
 
@@ -45,10 +45,14 @@ def printTrans():
 
 def voidItem():
     selection = input("Line number to remove:  ")
-    if selection.isnumeric():
+    #if selection.isnumeric():
+    try:
         del items.data["UPC"][int(selection)]
         del items.data["NAME"][int(selection)]
         del items.data["PRICE"][int(selection)]
+    except:
+        print("Not a valid line number.  Try again.")
+        voidItem()
 
 def voidTrans():
     yn = input(f"Are you sure you wish to void the ENTIRE transaction?  [y/n]:  ")

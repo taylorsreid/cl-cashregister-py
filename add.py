@@ -1,6 +1,7 @@
 import mysql.connector
 import requests
 import items
+import time
 
 def addPriceManually():
     price = input("PRICE:  ")
@@ -69,7 +70,7 @@ try:
     #cursor object declaration
     mycursor = mydb.cursor()
     print("Successfully connected to MySQL database...")
-    #time.sleep(1.5)
+    time.sleep(1.5)
 except:
     print("Error connecting to MySQL!  The application will fall back to using the barcode.monster API")
-    #time.sleep(3)
+    time.sleep(3)
