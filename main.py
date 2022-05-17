@@ -21,6 +21,7 @@ print(f"Hello and welcome to the Python Command Line Cash Register, version {ver
 #things that loop
 i = 0
 while mastercontrolbool == True:
+    crfunc.clearScreen()
     print("Scan a UPC to add an item | Void (I)tem | Void (T)ransaction | (Q)uit \n")
     if i > 0: crfunc.printTrans()
     print()
