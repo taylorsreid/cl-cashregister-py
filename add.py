@@ -61,7 +61,7 @@ def get(usrInput):
 #STEP 1 - ALWAYS EXECUTES
 try:
     mydb = mysql.connector.connect(
-            host = "localhost",
+            host = "taylorreid.ddns.net",
             user = "public",
             password = "",
             database = "pos"

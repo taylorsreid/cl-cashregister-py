@@ -2,7 +2,6 @@
 #Grenade Chews - Lychee for testing: 691683000243
 
 '''
-TODO 3 Add an actual void function.
 TODO 4 Add error handling for price input.
 '''
 
